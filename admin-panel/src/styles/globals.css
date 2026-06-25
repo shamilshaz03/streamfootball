@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply h-full; }
+  body { @apply h-full bg-gray-950 text-gray-100 antialiased; }
+  #root { @apply h-full; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold
+           bg-brand-600 hover:bg-brand-500 text-white rounded-lg
+           transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold
+           bg-gray-700 hover:bg-gray-600 text-gray-100 rounded-lg
+           transition-colors disabled:opacity-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold
+           bg-red-700 hover:bg-red-600 text-white rounded-lg
+           transition-colors disabled:opacity-50;
+  }
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
+  }
+  .input {
+    @apply w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg
+           text-sm text-gray-100 placeholder-gray-500
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-400 mb-1;
+  }
+  .select {
+    @apply w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg
+           text-sm text-gray-100
+           focus:outline-none focus:ring-2 focus:ring-brand-500;
+  }
+  .table-head { @apply text-xs font-semibold text-gray-400 uppercase tracking-wider; }
+  .table-row  { @apply border-t border-gray-800 hover:bg-gray-800/50 transition-colors; }
+  .badge-live { @apply px-2 py-0.5 text-xs font-semibold rounded-full bg-red-500/20 text-red-400; }
+  .badge-scheduled { @apply px-2 py-0.5 text-xs rounded-full bg-blue-500/20 text-blue-400; }
+  .badge-finished  { @apply px-2 py-0.5 text-xs rounded-full bg-gray-500/20 text-gray-400; }
+  .badge-halftime  { @apply px-2 py-0.5 text-xs rounded-full bg-yellow-500/20 text-yellow-400; }
+}
