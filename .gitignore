@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+
+# Environment files — never commit secrets
+.env
+*.env
+
+# Database
+*.db
+*.sqlite3
+
+# Alembic local SQLite cache
+alembic_version_cache.json
+
+# Uploads
+backend/app/static/uploads/*
+!backend/app/static/uploads/.gitkeep
+
+# Node / frontend
+node_modules/
+admin-panel/dist/
+admin-panel/.vite/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
